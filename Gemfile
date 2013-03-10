@@ -48,3 +48,8 @@ gem "launchy", ">= 2.2.0", :group => :test
 gem "capybara", ">= 2.0.2", :group => :test
 gem "factory_girl_rails", ">= 4.2.0", :group => [:development, :test]
 gem "bootstrap-sass", ">= 2.3.0.0"
+gem "quiet_assets", ">= 1.0.1", :group => :development
+gem "figaro", ">= 0.5.3"
+gem "libv8", ">= 3.11.8"
+gem "therubyracer", ">= 0.11.3", :group => :assets, :platform => :ruby, :require => "v8"
+gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
