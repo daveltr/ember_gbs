@@ -11,7 +11,7 @@ gem "unicorn", ">= 4.3.1", :group => :production
 gem "haml-rails", ">= 0.4"
 gem "html2haml", ">= 1.0.1", :group => :development
 gem "rspec-rails", ">= 2.12.2", :group => [:development, :test]
-gem "database_cleaner", ">= 0.9.1", :group => :test
+# gem "database_cleaner", ">= 0.9.1", :group => :test
 gem "email_spec", ">= 1.4.0", :group => :test
 gem "cucumber-rails", ">= 1.3.0", :group => :test, :require => false
 gem "launchy", ">= 2.2.0", :group => :test
