@@ -16,10 +16,15 @@
     #main{:role => "main"}
       .container
         .content
-          .row
+          .row-fluid
             .span12
+              #content-app
               = render 'layouts/messages'
               = yield
           %footer
       / ! end of .container
     / ! end of #main
+:javascript
+  $(document).ready(function() {
+    window.init_app()
+  });
