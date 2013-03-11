@@ -1,9 +1,6 @@
-<h3>Index</h3>
+<h4>Google Book Search</h4>
 {{view App.TextField valueBinding='controller.searchTerm'}}
 {{outlet}}
-{{controller.searchTerm }}
-<ul class="media-list">
-  {{#each item in controller}}
-    {{partial "books/book" }}
-  {{/each}}
-</ul>
+{{!controller.searchTerm }}
+<hr>
+{{view App.BookCollectionView}}
