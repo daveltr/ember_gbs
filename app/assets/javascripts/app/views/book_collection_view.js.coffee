@@ -1,6 +1,7 @@
 App.BookCollectionView = Em.View.extend
   templateName: 'books/collectionView'
-  didInsertElement: ->
-    console?.log('die bcv')
-  willRerender: ->
-    console?.log('wrr bcv')
+  contentObserver: ( ->
+    Ember.run.next this, ->
+        @.$('.collapse').collapse()
+  ).observes('controller.content')
+  

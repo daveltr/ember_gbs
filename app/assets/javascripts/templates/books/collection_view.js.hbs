@@ -1,5 +1,16 @@
-<ul class="media-list">
+<div class="accordion" id="accordion2">
   {{#each item in controller}}
-    {{partial "books/book" }}
+    <div class="accordion-group">
+      <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" {{bindAttr href="item.href" }}>
+          {{item.title}}
+        </a>
+      </div>
+      <div {{bindAttr id='item.id' }} class="accordion-body collapse in">
+        <div class="accordion-inner">
+          {{item.description}}
+        </div>
+      </div>
+    </div>
   {{/each}}
-</ul>
+</div>

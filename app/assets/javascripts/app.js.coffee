@@ -21,9 +21,7 @@ window.init_app= () ->
   console?.log("Starting App")
   App.advanceReadiness()
 
-# window.init_app()
 App.TextField = Em.TextField.extend
   insertNewline:()  -> 
-    # console?.log('updated')
     @.get('controller').set('valueChanged', true)
     
