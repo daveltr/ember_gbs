@@ -3,7 +3,6 @@ App.IndexController = Em.ArrayController.extend
   searchTerm: "With The Lightnings" 
   service: null
   valueChanged: false
-  
   stObserver: ( ->
     this.service.find(@.get('searchTerm'), this)
     this.set("valueChanged", false)

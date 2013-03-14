@@ -3,6 +3,7 @@ App.RetrieveBooksService = Em.Object.extend
   bookCollection: []
   find: (title, controller) ->
     # console?.log "finder"
+
     enc_title = encodeURIComponent(title)
     self = this
     jQuery.ajax("/api/books/#{enc_title}.json",

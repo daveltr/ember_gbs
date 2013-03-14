@@ -8,5 +8,3 @@ App.AppAdapter = Em.Mixin.create # DS.RESTAdapter.extend
 #   adapter: DS.RESTAdapter.createWithMixins(App.AppAdapter, {
 #     url:"http://localhost:3000"
 #   })
-
-

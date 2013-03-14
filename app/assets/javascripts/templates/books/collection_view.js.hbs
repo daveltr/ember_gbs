@@ -1,16 +1,6 @@
 <div class="accordion" id="accordion2">
   {{#each item in controller}}
-    <div class="accordion-group">
-      <div class="accordion-heading">
-        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" {{bindAttr href="item.href" }}>
-          {{item.title}}
-        </a>
-      </div>
-      <div {{bindAttr id='item.id' }} class="accordion-body collapse in">
-        <div class="accordion-inner">
-          {{item.description}}
-        </div>
-      </div>
-    </div>
+    {{!template 'acc_item'}}
+    {{view App.AccItemView contextBinding="item"}}
   {{/each}}
 </div>
