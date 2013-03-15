@@ -1,13 +1,14 @@
 App.AccordionView = Em.View.extend
-  templateName: "accordion"
+  templateName: "accordion/accordion"
   id: "accordion3"
   optionIdPath: "content.id"
   optionTitlePath: "content.title"
   optionBodyPath: "content.description"
 
+
 App.AccItemView = Em.View.extend
   classNames: ['accordion-group']
-  templateName: 'acc_item'
+  templateName: 'accordion/acc_item'
   content: null 
 
   init: ->
@@ -19,6 +20,7 @@ App.AccItemView = Em.View.extend
 
   idPathDidChange: Ember.observer (->
     idPath = @.get("parentView.optionIdPath")
+    return unless idPath
     Ember.defineProperty this, "idField", Ember.computed(->
         @.get idPath
       ).property(idPath)
@@ -29,6 +31,7 @@ App.AccItemView = Em.View.extend
 
   titlePathDidChange: Ember.observer (->
     titlePath = @.get("parentView.optionTitlePath")
+    return unless titlePath
     Ember.defineProperty this, "header", Ember.computed(->
         @.get titlePath
       ).property(titlePath)
@@ -36,6 +39,7 @@ App.AccItemView = Em.View.extend
 
   bodyPathDidChange: Ember.observer (->
     bodyPath = @.get("parentView.optionBodyPath")
+    return unless bodyPath 
     Ember.defineProperty this, "body", Ember.computed(->
         @.get bodyPath
       ).property(bodyPath)
@@ -45,4 +49,3 @@ App.AccItemView = Em.View.extend
     accordion_id = "#"+@.get("parentView.id")
     Ember.run.next this, ->
       @.$('.collapse').collapse({parent:accordion_id})
-`
