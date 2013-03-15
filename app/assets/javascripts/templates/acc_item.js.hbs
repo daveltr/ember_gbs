@@ -1,10 +1,11 @@
-  <div class="accordion-heading">
-    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" {{bindAttr href="item.href" }}>
-      {{item.title}}
-    </a>
+{{!<div class="accordion-group"> is in the View itself}}
+<div class="accordion-heading">
+  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" {{bindAttr href="item.href" }}>
+    {{item.title}}
+  </a>
+</div>
+<div {{bindAttr id='item.id' }} class="accordion-body collapse in">
+  <div class="accordion-inner">
+    {{item.description}}
   </div>
-  <div {{bindAttr id='item.id' }} class="accordion-body collapse in">
-    <div class="accordion-inner">
-      {{item.description}}
-    </div>
-  </div>
+</div>
