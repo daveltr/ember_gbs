@@ -1,0 +1,6 @@
+<div class="accordion" {{bindAttr id="view.id"}}>
+  {{#each item in controller}}
+    {{!template 'acc_item'}}
+    {{view App.AccItemView contentBinding="item" }}
+  {{/each}}
+</div>

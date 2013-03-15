@@ -1,11 +1,10 @@
-{{!<div class="accordion-group"> is in the View itself}}
 <div class="accordion-heading">
-  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" {{bindAttr href="item.href" }}>
-    {{item.title}}
+  <a class="accordion-toggle" data-toggle="collapse" {{bindAttr href="view.href" }}>
+    {{view.header}}
   </a>
 </div>
-<div {{bindAttr id='item.id' }} class="accordion-body collapse in">
+<div {{bindAttr id='view.idField' }} class="accordion-body collapse in">
   <div class="accordion-inner">
-    {{item.description}}
+    {{view.body}}
   </div>
 </div>
